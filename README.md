@@ -1,7 +1,7 @@
 import os
 
 class Produtos:
-
+    #O _init_ deve ter dois underlines(_), colocar em todo o resto do código assim
     def _init_(self, nome, valor, quantidade):
         self.nomeproduto = nome
         self.valorproduto = valor
@@ -72,3 +72,17 @@ class SistemaCadastroProduto:
 SCP = SistemaCadastroProduto()
 
 SCP.cadastrarproduto()
+
+#Troque o salvar no arquivo por este caminho:
+  class SistemaCadastroProduto:
+
+    def _init_(self):
+        self.arquivo = r"c:\Users\User\Desktop\Empresa+ Produtos\produtos.txt"
+
+#Também adicione um tratamento de erro no nome, pois estão estrando números.
+
+#Adicione a função listar também.
+
+#Adicionar colorama também
+
+#Ou seja, adicionar tratamento de erro no nome usando str, adicionar a função listar e adicionar o colorama.
