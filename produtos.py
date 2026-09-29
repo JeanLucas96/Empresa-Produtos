@@ -2,7 +2,7 @@ import os
 
 class Produtos:
 
-    def _init_(self, nome, valor, quantidade):
+    def __init__(self, nome, valor, quantidade):
         self.nomeproduto = nome
         self.valorproduto = valor
         self.quantidadeproduto = quantidade
@@ -11,7 +11,7 @@ class Produtos:
 class SistemaCadastroProduto:
 
     def _init_(self):
-        self.arquivo = r"c:\Users\User\Desktop\Empresa+ Produtos"
+        self.arquivo = r"produtos.txt"
 
     def cadastrarproduto(self):
 
@@ -23,7 +23,7 @@ class SistemaCadastroProduto:
 
                 nomeproduto = input("Digite o nome do produto: ").strip()
 
-                if nomeproduto == "":
+                if not nomeproduto.isalpha() or nomeproduto == "":
                     print("\nNome inválido\n")
                 else:
                     break
@@ -32,7 +32,7 @@ class SistemaCadastroProduto:
 
                 try:
 
-                    valorproduto = float(input("\nDigite a valor do produto: "))
+                    valorproduto = float(input("\nDigite o valor do produto: "))
 
                     if valorproduto < 0:
                         print("\nValor invalido")
